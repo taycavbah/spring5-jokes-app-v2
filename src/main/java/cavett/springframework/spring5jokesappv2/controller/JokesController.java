@@ -20,9 +20,10 @@ public class JokesController {
     @RequestMapping({"/", " "})
     public String showJoke(Model model){
 
-        model.addAttribute("Joke", jokesService.getJoke());
+        model.addAttribute("joke", jokesService.getJoke());
 
-        return "index"; // implement index view
+        // this tells thymeleaf to look at index for template under index
+        return "index"; 
     }
     
 }
